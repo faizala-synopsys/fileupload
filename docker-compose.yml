@@ -1,0 +1,12 @@
+version: '3'
+services:
+  web:
+    container_name: fileupload
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+       - ./configuration/000-default.conf:/etc/apache2/sites-available/000-default.conf
+    ports:
+      - 9001:80
+    image: faizala-synopsys/fileupload:latest
