@@ -11,7 +11,7 @@
         </div>
         <div class="row">
             <p class="lead">
-                Uploading executable php files is forbidden.<br />
+                Our Developer has fixed the previous bug.<br />
             </p>
         </div>
     </div>
@@ -34,11 +34,11 @@
         $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
         $file=basename($_FILES["fileToUpload"]["name"]);
         if (preg_match ("/^.*\.(php|php1|php2|php3|php4|php5)$/",$file)) {
-            echo "<p class=\"alert-danger\">Sorry, you cannot upload executable file.</p>";
+            echo "<p class=\"alert-danger\">Smart? but not Smart enough. Try uploading again..</p>";
         }
         else{
             if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
-                echo "<p class=\"alert-success\">The file has been uploaded here: <a href=\"$target_file\">$target_file</a>.</p>";
+                echo "<p class=\"alert-success\">The file has been uploaded.</p>";
             } else {
                 echo "<p class=\"alert-danger\">Sorry, there was an error uploading your file.</p>";
             }
@@ -48,7 +48,6 @@
     <script type="text/javascript" src="/static/css/bootstrap.min.js"></script>
 </body>
 </html>
-<!--Hint: BlackList extension validation--!>
 <?php
 include ("../footer.php");
 ?>
