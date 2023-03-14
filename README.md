@@ -9,28 +9,19 @@ This repository is a dockerized PHP application containing some file upload vuln
 # Bypass Techniques
 The ideas behind challenges are:</br>
 * Bypassing client-side file extension validations.
-* Bypassing client-side file size validations.
-* Injecting PHP code into a gif file
-* Run any extensions with the PHP engine (using .htaccess file)
 * Black-list extension validation bypass
-* White-list extension validation bypass
-* Double extension bypass
-* Server-side file size validation bypass
-* Server-side file extension validation bypass
-* Content-type validation bypass of file upload
 * Finding renamed file names and locations after upload process
-* Removing force download (using "Content-Disposition" header) to run the php file by use of htaccess
 
 # Quick Start Using Docker
 **Using docker hub (Quickest):**
 1. To access the challenges, you need <a href="https://docs.docker.com/install">docker</a> installed.</br>
-2. Run this command to pull and run the image from docker hub:</br>`sudo docker run -d -p 9001:80 moeinfatehi/file_upload_vulnerabilities`
+2. Run this command to pull and run the image from docker hub:</br>`sudo docker run -d -p 9001:80 faizala-synopsys/fileupload`
 3. Access the challenges with this URL: <a href="http://localhost:9001">http://localhost:9001</a>
 
 
 **Using docker-compose:**  
 1. To access the challenges, you need <a href="https://docs.docker.com/install">docker</a> and <a href="https://docs.docker.com/compose/install/">docker-compose</a> installed.</br>
-2. Clone the repository</br>`git clone https://github.com/moeinfatehi/file_upload_vulnerability_scenarios.git`
+2. Clone the repository</br>`git clone https://github.com/faizala-synopsys/fileupload.git`
 3. Open the main directory of the project (where docker-compose.yml file exists) and run: `docker-compose up`
 4. Access the challenges with this URL: <a href="http://localhost:9001">http://localhost:9001</a>
 
